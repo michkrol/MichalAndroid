@@ -21,14 +21,14 @@
         android:layout_below="@+id/powitanie"
         />
 
-    <RatingBar
+    <ProgressBar
         android:id="@+id/pasek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sila"
-        android:isIndicator="true"
+        style="?android:progressBarStyleHorizontal"
         android:max="12"
-        android:numStars="6"
+        android:indeterminate="false"
         />
 
     <EditText

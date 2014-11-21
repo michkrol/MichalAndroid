@@ -1,7 +1,6 @@
 package com.example.student7.michal;
 
 import android.content.Intent;
-import android.media.Rating;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -10,16 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class SecondActivity extends ActionBarActivity {
 
     private TextView powitanie;
     private TextView sila;
-    private RatingBar pasek;
+    private ProgressBar pasek;
     private EditText numer;
 
     @Override
@@ -28,7 +25,7 @@ public class SecondActivity extends ActionBarActivity {
         setContentView(R.layout.activity_second);
         powitanie=(TextView) findViewById(R.id.powitanie);
         sila=(TextView) findViewById(R.id.sila);
-        pasek=(RatingBar) findViewById(R.id.pasek);
+        pasek=(ProgressBar) findViewById(R.id.pasek);
         numer=(EditText) findViewById(R.id.numer);
         Bundle extras = getIntent().getExtras();
         String username = extras.getString("username");
