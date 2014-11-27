@@ -9,19 +9,25 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
+@EActivity(R.layout.activity_my)
 public class MyActivity extends ActionBarActivity {
 
-    private EditText username;
-    private EditText haslo;
+    @ViewById(R.id.nazwa_uzytkownika)
+    EditText username;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
-        username=(EditText) findViewById(R.id.nazwa_uzytkownika);
-        haslo=(EditText) findViewById(R.id.haslo);
-    }
+    @ViewById(R.id.haslo)
+    EditText haslo;
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_my);
+//        username=(EditText) findViewById(R.id.nazwa_uzytkownika);
+//        haslo=(EditText) findViewById(R.id.haslo);
+//    }
 
     public void loginClicked(View view) {
         if(username.getText().length()>0 && haslo.getText().length()>0) {
