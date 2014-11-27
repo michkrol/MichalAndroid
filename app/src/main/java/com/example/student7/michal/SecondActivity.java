@@ -35,7 +35,7 @@ public class SecondActivity extends ActionBarActivity {
         pasek.setProgress(silaLiczba(haslo));
     }
 
-    public void zadzwonClicked(View view) {
+       public void zadzwonClicked(View view) {
         String tel = numer.getText().toString();
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:"+tel));
